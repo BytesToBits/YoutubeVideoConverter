@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope');
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    background: rgb(36,36,82);
+    background: linear-gradient(0deg, rgba(36,36,82,1) 7%, rgba(32,45,110,1) 95%);
+}
+
+input[type="url"] {
+    position: absolute;
+    outline: none;
+    left: 50%;
+    top: 5%;
+    padding: 5px;
+    width: 400px;
+    transform: translateX(-60%);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+select[name="type"] {
+    position: absolute;
+    outline: none;
+    left: 50%;
+    top: 5%;
+    padding: 5px;
+    text-align: center;
+    width: max-content;
+    transform: translateX(-270%);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    position: absolute;
+    outline: none;
+    left: 50%;
+    top: 5%;
+    padding: 5px;
+    text-align: center;
+    width: 200px;
+    transform: translateX(100%);
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+img {
+    z-index: 10000000;
+    height: 300px;
+    opacity: 100%;
+    border: 2px solid aqua;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-100%);
+    animation: appear 1.5s ease-in-out;
+}
+
+button {
+    position: absolute;
+    outline: none;
+    padding: 5px;
+    text-align: center;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    opacity: 100%;
+}
+
+#viewVideo {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(30%);
+}
+
+#downloadThumb {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(30%);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+        transform: translateX(-50%);
+    }
+
+    60% {
+        opacity: 100%;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateX(-100%);
+    }
+}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block links %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='styles/index.css')}}">
+
+{% endblock %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+<form action="/" method="POST">
+    <input type="url" name="url", placeholder="Youtube URL" required>
+    <select name="type" required>
+        <option value="best">Youtube & Audio</option>
+        <option value="bestvideo/best">Video Only</option>
+        <option value="bestaudio/best">Audio Only</option>
+    </select>
+    <input type="submit" value="Convert!">
+</form>
+{% if data %}
+
+<img src="{{data['thumbnail']}}">
+
+<div class="buttons">
+
+    <a href="{{data['url']}}" target="_blank"><button id="viewVideo">View {{data['title']}}</button></a>
+
+    <a href="{{data['thumbnail']}}" target="_blank"><button id="downloadThumb">Download Thumbnail</button></a>
+
+</div>
+
+{% endif %}
+
+{% endblock %}
